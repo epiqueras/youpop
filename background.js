@@ -3,8 +3,9 @@ chrome.runtime.onMessage.addListener(
     chrome.windows.create( {
       url: 'video.html?video=' + request.videoUrl,
       width: request.windowWidth,
-      height: request.windowHeight,
-      top: request.topOffset,
+      height: request.windowHeight + 22,
+      top: request.topOffset + 52,
       left: request.leftOffset,
+      type: 'popup',
     });
 });

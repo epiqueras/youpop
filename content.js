@@ -3,7 +3,7 @@ var popVideo = function popThisVideo() {
   chrome.runtime.sendMessage({
     videoUrl: window.location.href,
     windowWidth: player.width,
-    windowHeight: player.height + 74,
+    windowHeight: player.height,
     topOffset: window.screenY + player.top,
     leftOffset: window.screenX + player.left,
   });
