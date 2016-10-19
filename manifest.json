@@ -12,9 +12,10 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.youtube.com/watch?v*"
+        "*://*.youtube.com/*"
       ],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ],
   "browser_action": {
