@@ -14,8 +14,7 @@
       "matches": [
         "*://*.youtube.com/watch?v*"
       ],
-      "js": ["content.js"],
-      "css": ["content.css"]
+      "js": ["content.js"]
     }
   ],
   "browser_action": {
