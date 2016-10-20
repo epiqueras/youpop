@@ -5,14 +5,13 @@ window.onload = function onWindowLoad() {
     if(document.querySelector(selector) != null) {
       var popVideo = function popThisVideo() {
         var player = document.getElementById('player-api').getBoundingClientRect();
-        var message = {
+        chrome.runtime.sendMessage({
           videoUrl: window.location.href,
           windowWidth: Math.round(player.width),
           windowHeight: Math.round(player.height),
           topOffset: Math.round(window.screenY + player.top),
           leftOffset: Math.round(window.screenX + player.left),
-        }
-        chrome.runtime.sendMessage(message);
+        });
       }
       var popButton = document.createElement('button');
       popButton.className = 'ytp-button';
