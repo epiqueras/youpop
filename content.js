@@ -7,10 +7,10 @@ window.onload = function onWindowLoad() {
         var player = document.getElementById('player-api').getBoundingClientRect();
         chrome.runtime.sendMessage({
           videoUrl: window.location.href,
-          windowWidth: player.width,
-          windowHeight: player.height,
-          topOffset: window.screenY + player.top,
-          leftOffset: window.screenX + player.left,
+          windowWidth: Math.round(player.width),
+          windowHeight: Math.round(player.height),
+          topOffset: Math.round(window.screenY + player.top),
+          leftOffset: Math.round(window.screenX + player.left),
         });
       }
       var popButton = document.createElement('button');
